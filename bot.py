@@ -5,11 +5,15 @@ import asyncio
 intents = discord.Intents.default()
 intents.message_content = True
 
-client = commands.Bot(intents=intents, command_prefix = '/')
+client = commands.Bot(intents=intents, command_prefix = '/', help_command=None)
 
 @client.event
 async def on_ready():
     print('Bot is ready')
+
+@client.command()
+async def help(ctx):
+    await ctx.send("Deze bot is de motor achter onze klasgroep.\nHet zorgt ervoor dat er geen ruzies ontstaan en handelt deze eventueel af.\nCommando's zijn:\n**/help** Geeft dit menu.\n**/votekick @persoon reden hier** Start een stemming voor het verwijderen van iemand uit deze democratische klasgroep.")
 
 @client.command()
 @commands.has_permissions(administrator=True)
