@@ -11,6 +11,11 @@ client = commands.Bot(intents=intents, command_prefix = '/')
 async def on_ready():
     print('Bot is ready')
 
+@client.command()
+@commands.has_permissions(administrator=True)
+async def clear(ctx, amount = 100):
+    await ctx.channel.purge(limit=amount)
+
 @client.command(pass_context=True)
 async def votekick(ctx, member: discord.Member, *, reason=None):
     votes = 0
