@@ -14,4 +14,4 @@ async def on_ready():
 async def votekick(ctx, member : discord.Member):
     await ctx.send('test')
 
-client.run('MTA4MTE1NDIzNzY3MDY0MTY3NQ.GJbXLP.i08S_fqsD1dCM94KVmQ0hhAxwkACTcUZmqz3DM')
+client.run('')
