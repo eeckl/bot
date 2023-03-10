@@ -7,15 +7,6 @@ intents.message_content = True
 
 client = commands.Bot(intents=intents, command_prefix = '/')
 
-def leden_zonder_bots(ctx):
-    members = ctx.author.guild.members
-    leden_count = 0
-    for i in members:
-        member = i.bot
-        if member == False:
-            leden_count += 1
-    return leden_count
-
 @client.event
 async def on_ready():
     print('Bot is ready')
