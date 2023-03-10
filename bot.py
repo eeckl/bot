@@ -38,6 +38,6 @@ async def votekick(ctx, member: discord.Member, *, reason=None):
             await votekick_channel.send("We hebben niet genoeg voor-stemmen gekregen! Kick is geannuleerd, LUCKY!")
         
     except asyncio.TimeoutError:
-        await votekick_channel.send("Te weinig mensen hebben gereageerd binnen de minuut! Kick is geannuleerd, LUCKY!")
+        await votekick_channel.send("Te weinig mensen hebben gereageerd binnen de tijdslimiet! Kick is geannuleerd, LUCKY!")
 
 client.run('')
