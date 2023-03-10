@@ -12,6 +12,6 @@ async def on_ready():
 
 @client.command()
 async def votekick(ctx, member : discord.Member):
-    await ctx.send('test')
+    await ctx.send(f'{ctx.guild.member_count}test')
 
 client.run('')
